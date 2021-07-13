@@ -1,0 +1,8 @@
+FROM node:alpine
+WORKDIR '/app'
+COPY ./package.json ./
+RUN npm install
+COPY . .
+
+# npm run dev will start nodemon which restarts Express server everytime the Container file changes, since we are using Docker volumes in dev env, so local disk file will change will link to container file system.
+CMD ["npm", "run", "dev"]
