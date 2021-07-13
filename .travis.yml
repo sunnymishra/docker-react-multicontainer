@@ -1,8 +1,9 @@
+language: generic
 sudo: required
 services:
     - docker
     
-before_install
+before_install:
     - docker build -t sunnymishra0389/docker-react-testimage -f ./client/Dockerfile.dev ./client
     
 script:
