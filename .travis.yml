@@ -14,11 +14,9 @@ after_success:
     - docker build -t sunnymishra0389/multi-nginx ./nginx
     - docker build -t sunnymishra0389/multi-server ./server
     - docker build -t sunnymishra0389/multi-worker ./worker
-    
-    # Login to Docker Hub
+
     - echo "$DOCKER_PWD" | docker login -u "$DOCKER_ID" --password-stdin
-    
-    # Push above 4 newly created Images to DockerHub, so that AWS Beanstalk can pull them
+
     - docker push sunnymishra0389/multi-client
     - docker push sunnymishra0389/multi-nginx 
     - docker push sunnymishra0389/multi-server
