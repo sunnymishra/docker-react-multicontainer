@@ -10,15 +10,14 @@ script:
     - docker run -e CI=true sunnymishra0389/docker-react-testimage npm run test
     
 after_success:
-    #- docker build -t sunnymishra0389/multi-client ./client
-    #- docker build -t sunnymishra0389/multi-nginx ./nginx
-    #- docker build -t sunnymishra0389/multi-server ./server
-    #- docker build -t sunnymishra0389/multi-worker ./worker
+    - docker build -t sunnymishra0389/multi-client ./client
+    - docker build -t sunnymishra0389/multi-nginx ./nginx
+    - docker build -t sunnymishra0389/multi-server ./server
+    - docker build -t sunnymishra0389/multi-worker ./worker
 
-    #- echo "$DOCKER_PWD" | docker login -u "$DOCKER_ID" --password-stdin
+    - echo "$DOCKER_PWD" | docker login -u "$DOCKER_ID" --password-stdin
 
-    #- docker push sunnymishra0389/multi-client
-    #- docker push sunnymishra0389/multi-nginx 
-    #- docker push sunnymishra0389/multi-server
-    #- docker push sunnymishra0389/multi-worker
-    - echo "I reached here ..."
+    - docker push sunnymishra0389/multi-client
+    - docker push sunnymishra0389/multi-nginx 
+    - docker push sunnymishra0389/multi-server
+    - docker push sunnymishra0389/multi-worker
