@@ -4,6 +4,7 @@
 		{
 			"name": "client",
 			"image": "sunnymishra0389/multi-client",
+			"memory": 512,
 			"hostname": "client",
 			"essential": false
 		},
