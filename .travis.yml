@@ -21,3 +21,15 @@ after_success:
     - docker push sunnymishra0389/multi-nginx 
     - docker push sunnymishra0389/multi-server
     - docker push sunnymishra0389/multi-worker
+    
+deploy:
+    provider: elasticbeanstalk
+    region: "ap-south-1"
+    app: "multi-container-react-app"
+    env: "Multicontainerreactapp-env"
+    bucket-name: "elasticbeanstalk-ap-south-1-230907580299"
+    bucket-path: "multi-docker-react"
+    on:
+        branch: master
+    access_key_id: $AWS_ACCESS_KEY
+    secret_access_key: $AWS_KEY_SECRET
