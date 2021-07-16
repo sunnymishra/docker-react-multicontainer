@@ -25,6 +25,7 @@
 		{
 			"name": "nginx",
 			"image": "sunnymishra0389/multi-nginx",
+			"memory": 512,
  			"essential": true,
 			"portMappings": [
 				{
