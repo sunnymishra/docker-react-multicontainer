@@ -4,28 +4,28 @@
 		{
 			"name": "client",
 			"image": "sunnymishra0389/multi-client",
-			"memory": 512,
+			"memory": 128,
 			"hostname": "client",
 			"essential": false
 		},
 		{
 			"name": "server",
 			"image": "sunnymishra0389/multi-server",
-			"memory": 512,
+			"memory": 128,
 			"hostname": "apiserver",
 			"essential": false
 		},
 		{
 			"name": "worker",
 			"image": "sunnymishra0389/multi-worker",
-			"memory": 512,
+			"memory": 128,
 			"hostname": "worker",
 			"essential": false
 		},
 		{
 			"name": "nginx",
 			"image": "sunnymishra0389/multi-nginx",
-			"memory": 512,
+			"memory": 128,
  			"essential": true,
 			"portMappings": [
 				{
