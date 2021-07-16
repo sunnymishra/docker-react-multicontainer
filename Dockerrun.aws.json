@@ -11,12 +11,14 @@
 		{
 			"name": "server",
 			"image": "sunnymishra0389/multi-server",
+			"memory": 512,
 			"hostname": "apiserver",
 			"essential": false
 		},
 		{
 			"name": "worker",
 			"image": "sunnymishra0389/multi-worker",
+			"memory": 512,
 			"hostname": "worker",
 			"essential": false
 		},
